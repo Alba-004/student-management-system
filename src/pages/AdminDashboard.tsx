@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useMemo, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { supabase } from '../lib/supabase';
 import EditStudentDialog, { type EditableStudent } from '../components/EditStudentDialog';
 import DeleteStudentDialog, { type DeletableStudent } from '../components/DeleteStudentDialog';
@@ -203,9 +203,14 @@ function AdminDashboard() {
             <span className="topbar-eyebrow">Admin</span>
             <h1>Students</h1>
           </div>
-          <button type="button" className="btn btn-secondary btn-sm" onClick={handleLogout}>
-            Log out
-          </button>
+          <div className="admin-topbar-actions">
+            <Link to="/admin/about" className="btn btn-tinted btn-sm">
+              About
+            </Link>
+            <button type="button" className="btn btn-secondary btn-sm" onClick={handleLogout}>
+              Log out
+            </button>
+          </div>
         </div>
       </header>
 

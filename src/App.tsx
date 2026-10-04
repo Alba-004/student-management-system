@@ -4,6 +4,7 @@ import Register from './pages/Register';
 import Login from './pages/Login';
 import StudentDashboard from './pages/StudentDashboard';
 import AdminDashboard from './pages/AdminDashboard';
+import AdminAbout from './pages/AdminAbout';
 import AdminRoute from './components/AdminRoute';
 
 function App() {
@@ -19,6 +20,14 @@ function App() {
           element={
             <AdminRoute>
               <AdminDashboard />
+            </AdminRoute>
+          }
+        />
+        <Route
+          path="/admin/about"
+          element={
+            <AdminRoute>
+              <AdminAbout />
             </AdminRoute>
           }
         />
