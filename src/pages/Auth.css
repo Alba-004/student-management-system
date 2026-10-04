@@ -1,0 +1,104 @@
+/* Layout shared by the Register and Login pages. Components come from index.css. */
+
+.auth {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-10) var(--space-4);
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 440px;
+  padding: var(--space-8);
+}
+
+.auth-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  margin-bottom: var(--space-6);
+  text-align: center;
+}
+
+.auth-mark {
+  display: grid;
+  place-items: center;
+  width: 56px;
+  height: 56px;
+  margin-bottom: var(--space-2);
+  border-radius: 16px;
+  background: linear-gradient(160deg, var(--accent), #5856d6);
+  color: #fff;
+  font-size: 26px;
+  font-weight: 700;
+  box-shadow: 0 8px 20px var(--accent-ring);
+}
+
+.auth-subtitle {
+  font-size: 15px;
+  color: var(--text-secondary);
+}
+
+.auth-card .segmented {
+  margin-bottom: var(--space-5);
+}
+
+.auth-card .alert {
+  margin-bottom: var(--space-4);
+}
+
+.auth-card .form .btn-primary {
+  margin-top: var(--space-2);
+}
+
+.auth-footer {
+  margin-top: var(--space-6);
+  padding-top: var(--space-5);
+  border-top: 1px solid var(--border);
+  text-align: center;
+  font-size: 15px;
+  color: var(--text-secondary);
+}
+
+.auth-success {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+  text-align: center;
+}
+
+.auth-success-icon {
+  display: grid;
+  place-items: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--success-tint);
+  color: var(--success-text);
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.auth-success p {
+  color: var(--text-secondary);
+}
+
+.auth-success .btn {
+  margin-top: var(--space-3);
+}
+
+@media (max-width: 520px) {
+  .auth {
+    align-items: flex-start;
+    padding: var(--space-6) var(--space-3);
+  }
+
+  .auth-card {
+    padding: var(--space-6) var(--space-5);
+    border-radius: var(--radius-lg);
+  }
+}
